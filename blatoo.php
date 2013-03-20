@@ -20,6 +20,11 @@
     { 
         switch($input[$counter])
         {
+            case "-s":
+            case "--solved":
+                $url .= "+solved";
+                $counter++;
+                break;
             case "-v":
             case "--version":
                 echo $version . "\n";
@@ -27,7 +32,7 @@
                 break;
             case "-h":
             case "--help":
-                echo "Help Placeholder\n";
+                echo "-s/--solved will add 'solved' to the search. -h/--help for this help. -v/--version for version info.\n";
                 $cFlag = false;
                 break;
             default:
