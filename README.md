@@ -1,4 +1,4 @@
 blatoo
 ======
 
-gentoo searcher
+gentoo documentation searcher
