@@ -8,5 +8,4 @@ jobs:
       script:
       - travis_retry composer self-update
       - travis_retry composer install --prefer-source --no-interaction
-      - cp .env.testing .env
       - vendor/bin/phpunit tests
