@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit bootstrap="tests/bootstrap.php"
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        colors="true"
+        verbose="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        stopOnFailure="false"
+        stopOnError="false">
+    <testsuites>
+        <testsuite name="fbenas/blatoo">
+            <directory>tests</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">src/</directory>
+        </whitelist>
+    </filter>
+    <logging>
+        <log type="coverage-html" target="tests/tmp/report"
+             lowUpperBound="40"
+             highLowerBound="80"/>
+        <log type="coverage-text" target="tests/tmp/coverage.txt"/>
+        <log type="testdox-text" target="tests/tmp/testdox.txt"/>
+    </logging>
+</phpunit>

@@ -1,0 +1,14 @@
+os: 
+  - linux
+language: php
+php:
+  - '7.3'
+jobs:
+  inlcude:
+    - stage: "Tests"
+      name: "Unit Test PHP"
+      script
+      - travis_retry composer self-update
+      - travis_retry composer install --prefer-source --no-interaction
+      - cp .env.testing .env
+      - vendor/bin/phpunit tests
